@@ -1,0 +1,27 @@
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-
+        target="#navbarResponsive" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+        <%= link_to "Eval", root_path, id: "logo" %>
+        <a class="navbar-brand">
+          <%= link_to image_tag("triangle.png", alt: "logo", width: "45"), root_path%>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+         <ul class="nav navbar-nav navbar-right">
+           <li class="active"><%= link_to "Home", root_path %></li>
+           <li><%= link_to "About", about_path %></li>
+           <li><%= link_to "Admin Log in", admin_login_path %></li>
+           <li><%= link_to "Student Log in", student_login_path %></li>
+         </ul>
+      </div>
+    </div>
+  </nav>
+</header>
