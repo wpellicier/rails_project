@@ -16,6 +16,9 @@ class PagesController < ApplicationController
 
   def student_evaluations
   end
+  
+  def student_signup
+  end
 
   def admin_login
   end
