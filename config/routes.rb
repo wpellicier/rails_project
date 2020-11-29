@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'students/new'
   get 'sessions/new'
   root 'pages#front'
   get '/about',               to: 'pages#about'
@@ -9,9 +10,9 @@ Rails.application.routes.draw do
   post '/admin_login',        to: 'sessions#new'
   delete '/logout',           to: 'sessions#destroy'
   
-  get '/student_signup',      to: 'pages#student_signup'
-  
-  get '/signup',              to: 'pages#student_signup'
+  #get '/student_signup',      to: 'students#student_signup'
+  #post '/student_signup',     to: 'students#new'
+  get '/student_signup',      to: 'students#new'
   
   get '/student_home',        to: 'pages#student_home'
   get '/student_projects',    to: 'pages#student_projects'
@@ -22,4 +23,5 @@ Rails.application.routes.draw do
   get '/admin_class_home',    to: 'pages#admin_class_home'
   get '/admin_team_overview', to: 'pages#admin_team_overview'
   
+  resources :students
 end

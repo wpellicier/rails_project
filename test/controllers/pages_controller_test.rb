@@ -8,61 +8,61 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get about" do
-    get about_url_path
+    get about_path
     assert_response :success
     assert_select "title", "About | Eval: Peer Evaluation"
   end
 
   test "should get student_login" do
-    get student_login_url_path
+    get student_login_path
     assert_response :success
     assert_select "title", "Student Login | Eval: Peer Evaluation"
   end
 
   test "should get student_home" do
-    get student_home_url_path
+    get student_home_path
     assert_response :success
     assert_select "title", "Student Home | Eval: Peer Evaluation"
   end
 
   test "should get student_projects" do
-    get student_projects_url_path
+    get student_projects_path
     assert_response :success
     assert_select "title", "Projects | Eval: Peer Evaluation"
   end
 
   test "should get student_evaluations" do
-    get tudent_evaluations_url_path
+    get student_evaluations_path
     assert_response :success
-    assert_select "title", "Evaluations | Eval: Peer Evaluation"
+    assert_select "title", "Team Evaluations | Eval: Peer Evaluation"
   end
 
   test "should get admin_login" do
-    get admin_login_url_path
+    get admin_login_path
     assert_response :success
     assert_select "title", "Admin Login | Eval: Peer Evaluation"
   end
 
   test "should get admin_home" do
-    get admin_home_url_path
+    get admin_home_path
     assert_response :success
     assert_select "title", "Admin Home | Eval: Peer Evaluation"
   end
 
   test "should get admin_classes" do
-    get admin_classes_url_path
+    get admin_classes_path
     assert_response :success
     assert_select "title", "Classes | Eval: Peer Evaluation"
   end
 
   test "should get admin_class_home" do
-    get admin_class_home_url_path
+    get admin_class_home_path
     assert_response :success
     assert_select "title", "Class Home | Eval: Peer Evaluation"
   end
 
   test "should get admin_team_overview" do
-    get admin_team_overview_url_path
+    get admin_team_overview_path
     assert_response :success
     assert_select "title", "Team Overview | Eval: Peer Evaluation"
   end

@@ -1,0 +1,44 @@
+<% provide(:title, "Student Sign Up") %>
+<div class="jumbotron">
+  <div class="col-md-6 text-center">
+    <div class="header-title">
+      <h1>
+        Sign up now — it’s free!
+      </h1>
+      <h2>
+        Lorem ipsum dolor sit amet!
+      </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="myform form">
+        <%= form_with(model: @student, local:true) do |f| %>
+          <%= render 'shared/error_messages' %>
+          <div class="form-group">
+            <label>Buck Id</label>
+            <%= f.text_field :buck_id, :class => "form-control my-input", :placeholder => "Buck ID"%>
+          </div>
+          <div class="form-group">
+            <label>First Name</label>
+             <%= f.text_field :fname, :class => "form-control my-input", :placeholder => "First Name"%>
+          <div class="form-group">
+            <label>Last Name</label>
+            <%= f.text_field :lname, :class => "form-control my-input", :placeholder => "Last Name"%>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <%= f.email_field :email, :class => "form-control my-input", :placeholder => "Email" %>
+          </div>
+          <div class="text-center ">
+            <button type="submit" class=" btn btn-lg btn-primary 
+                                   btn-block send-button tx-tfm">
+              Create Account
+            </button>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
