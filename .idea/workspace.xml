@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a602d55-1109-4f58-8180-5c4490ed978b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.ruby-version" beforeDir="false" afterPath="$PROJECT_DIR$/.ruby-version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/student_evaluations.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/student_evaluations.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/student_signup.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/student_signup.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +135,7 @@
       <updated>1606515474503</updated>
       <workItem from="1606515476175" duration="540000" />
       <workItem from="1606517241621" duration="4071000" />
+      <workItem from="1606613567001" duration="2615000" />
     </task>
     <servers />
   </component>
