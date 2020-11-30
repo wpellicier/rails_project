@@ -3,7 +3,7 @@ require 'test_helper'
 class StudentTest < ActiveSupport::TestCase
 
   def setup
-    @student = Student.new(buck_id: 0000, fname: "Example", lname: "Student", email: "student@example.com", team_id: 0)
+    @student = Student.new(buck_id: 0000, fname: "Example", lname: "Student", email: "student@example.com", team_id: 0, password: "foobar", password_confirmation: "foobar")
   end
 
   test "should be valid" do
@@ -58,4 +58,15 @@ class StudentTest < ActiveSupport::TestCase
     @student.save
     assert_not duplicate_user.valid?
   end
+  
+  test "password should be present (nonblank)" do
+    @student.password = @student.password_confirmation = " " * 8
+    assert_not @student.valid?
+  end
+
+  test "password should have a minimum length" do
+    @student.password = @student.password_confirmation = "z" * 5
+    assert_not @student.valid?
+  end
+
 end

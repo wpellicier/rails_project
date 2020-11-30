@@ -6,7 +6,8 @@ class CreateStudents < ActiveRecord::Migration[6.0]
       t.string :lname
       t.string :email
       t.integer :team_id
-
+      t.string :password
+      t.string :password_confirmation
       t.timestamps
     end
   end
