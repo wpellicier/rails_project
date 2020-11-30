@@ -281,7 +281,7 @@ h1.title{
 
 // Ratings title
 .project_title{
-  margin-left: 0%;
+  margin-right: 70%;
   font-weight: normal;
  }
  
@@ -295,7 +295,7 @@ h1.title{
   display: inline-block;
   width: 270px;
   height: 350px;
-  background:whitesmoke;
+  background: lightblue;
   margin: 30px;
 
   overflow: hidden;
@@ -310,23 +310,58 @@ h1.title{
 .member_name {
   position: relative;
   font-weight: bold;
-  top: 15%;
-  left: 20%;
+  top: 0%;
+  left: 10%;
   color:black;
   font-size: 30px;
+  margin-bottom: 0;
 
 }
-// Project # animation
-.box:hover .cover .sub_title {
-  font-size: 20px;
-  left: 35%;
+// rating label
+.rating_text{
+  position: relative;
+  font-weight: bold;
+  top: 5%;
+  left: 8%;
+  color:black;
+  font-size: 15px;
+  
 }
 
-// description text
+
+// rating form
+.rating{
+  align-items: center;
+  cursor: pointer;
+  margin-top: 6%;
+  margin-left: 8%;
+}
+
+.submitBtn{
+  position: relative;
+  border: none;
+  top: 13%;
+  left: 50%;
+  color:black;
+  background-color: dodgerblue;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 2px 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.submitBtn:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
+
+// comment text
 .text{
   position: relative;
-  top:100px;
-  left: 35%;
-  width: 60%;
+  top:5%;
+  left: 8%;
+  width: 85%;
+  height: 35%;;
   color: black;
 }
