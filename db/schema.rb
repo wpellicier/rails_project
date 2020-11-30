@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 2020_11_29_234917) do
     t.integer "project_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "comment"
   end
 
   create_table "students", force: :cascade do |t|
