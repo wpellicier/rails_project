@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   root 'pages#front'
   get '/about',               to: 'pages#about'
   
-  get '/student_login',       to: 'sessions#student_login'
-  post '/student_login',      to: 'sessions#new'
+  get '/student_login',       to: 'sessions#new'
+  post '/student_login',      to: 'sessions#create'
   get '/admin_login',         to: 'sessions#admin_login'
   post '/admin_login',        to: 'sessions#new'
   delete '/logout',           to: 'sessions#destroy'
