@@ -269,7 +269,64 @@ h1.title{
   margin: 4px 2px;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
 }
 .button:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
+
+
+
+// Ratings
+
+// Ratings title
+.project_title{
+  margin-left: 0%;
+  font-weight: normal;
+ }
+ 
+ .member_container{
+   position: relative;
+   width: 80%;
+   margin-left: 10%;
+ }
+ // member card
+ .member_box{
+  display: inline-block;
+  width: 270px;
+  height: 350px;
+  background:whitesmoke;
+  margin: 30px;
+
+  overflow: hidden;
+  border-radius: 5px;
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  transition: 0.3s;
+ 
+}
+
+// member name
+.member_name {
+  position: relative;
+  font-weight: bold;
+  top: 15%;
+  left: 20%;
+  color:black;
+  font-size: 30px;
+
+}
+// Project # animation
+.box:hover .cover .sub_title {
+  font-size: 20px;
+  left: 35%;
+}
+
+// description text
+.text{
+  position: relative;
+  top:100px;
+  left: 35%;
+  width: 60%;
+  color: black;
 }

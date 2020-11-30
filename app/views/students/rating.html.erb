@@ -1,0 +1,37 @@
+<% provide(:title, "Project Rating") %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+ 
+       <h1>
+         <%= gravatar_for @student %>
+         <%= @student.fname %> <%= @student.lname %>
+         RATING
+      </h1>
+    </section>
+  </aside>
+</div>
+
+
+<body>
+
+  <div class="member_container">
+    <h1 class="project_title">
+      Team Members for Project X
+    </h1>
+    
+    <div class="member_box">
+      <h4 class="member_name"> Ajay Kirtikar</h4>
+
+      <p class="text"> comment</p>
+    </div>
+
+    <div class="member_box">
+      <h4 class="member_name"> Ajay Kirtikar</h4>
+
+      <p class="text"> comment</p>
+    </div>
+  
+  </div>
+  
+</body>

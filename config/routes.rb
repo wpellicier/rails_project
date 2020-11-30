@@ -23,5 +23,8 @@ Rails.application.routes.draw do
   get '/admin_class_home',    to: 'pages#admin_class_home'
   get '/admin_team_overview', to: 'pages#admin_team_overview'
   
+  
+  get '/student_rating',        to: 'students#rating'
+
   resources :students
 end

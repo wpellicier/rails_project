@@ -18,9 +18,19 @@ class StudentsController < ApplicationController
     end
   end
 
+  #needs work, not done
+  def rating
+    @student = Student.find_by(id: session[:student_id])
+    #@rating = Rating.find_by(params[:id])
+  end
+
   private
 
     def student_params
       params.require(:student).permit(:buck_id, :fname, :lname, :email, :team_id, :password)
+    end
+
+    def student_ratings
+      params.require(:rating).permit(:rating, :user_id, :project_number, :comment)
     end
 end
