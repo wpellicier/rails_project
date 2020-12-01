@@ -4,14 +4,21 @@
     <section class="user_info">
  
        <h1>
-         <%= gravatar_for @student %>
-         <%= @student.fname %> <%= @student.lname %>
+         <%= gravatar_for @current_student %>
+         <%= @current_student.fname %> <%= @current_student.lname %>
          RATINGS
       </h1>
     </section>
   </aside>
 </div>
 
+<!-- creating and populating members array -->
+<% @members = Array.new%>
+<% @student.each do |student| %>
+  <%  if student.team_id === current_student.team_id %>
+    <% @members.push(student)%>
+  <% end %>
+<% end %>
 
 <body>
 
@@ -19,11 +26,12 @@
     <h1 class="project_title">
       Team Members for Project X
     </h1>
-
-    <!-- first member card -->
+    <!-- for each member in the current user's team -->
+    <% @members.each do |member| %>
+    <!-- member card -->
     <div class="member_box">
       <!-- member name -->
-      <h2 class="member_name"> Ajay Kirtikar</h2>
+      <h2 class="member_name"> <%= member.fname %> <%= member.lname %></h2>
       <label class="rating_text" > Rating</label>
       <!-- rating radio form -->
       <form class="rating">
@@ -66,110 +74,7 @@
       <!-- submit button-->
       <%= link_to "Submit", student_rating_path, class: "submitBtn" %>
     </div>
-
-
-    <!-- second member card -->
-    <div class="member_box">
-      <!-- member name -->
-      <h2 class="member_name"> Ajay Kirtikar</h2>
-      <label class="rating_text" > Rating</label>
-      <!-- rating radio form -->
-      <form class="rating">
-        <label class="radio-inline">
-          <input type="radio" name="optradio">0
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">1
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">2
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">3
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">4
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">5
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">6
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">7
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">8
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">9
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">10
-        </label>
-      </form>
-      <!-- comment box -->
-      <textarea class="text" id="textbox" > comment</textarea>
-      <!-- submit button-->
-      <%= link_to "Submit", student_rating_path, class: "submitBtn" %>
-    </div>
-
-    <!-- 3rd member card -->
-    <div class="member_box">
-      <!-- member name -->
-      <h2 class="member_name"> Ajay Kirtikar</h2>
-      <label class="rating_text" > Rating</label>
-      <!-- rating radio form -->
-      <form class="rating">
-        <label class="radio-inline">
-          <input type="radio" name="optradio">0
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">1
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">2
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">3
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">4
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">5
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">6
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">7
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">8
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">9
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">10
-        </label>
-      </form>
-      <!-- comment box -->
-      <textarea class="text" id="textbox" > comment</textarea>
-      <!-- submit button-->
-      <%= link_to "Submit", student_rating_path, class: "submitBtn" %>
-    </div>
-    
-    
-
-
-
-    
-
-
-    
+    <% end %>
   
   </div>
   
