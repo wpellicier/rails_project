@@ -13,8 +13,11 @@ class SessionsController < ApplicationController
         flash.now[:danger] = 'Invalid email/password combination'
         render 'admin_login'
       end
+      else
+        flash.now[:danger] = 'Invalid email/password combination'
+        render 'admin_login'
+      end
     end
-  end
 
   def create
     student = Student.find_by(email: params[:session][:email].downcase)
