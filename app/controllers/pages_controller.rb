@@ -24,6 +24,7 @@ class PagesController < ApplicationController
   end
 
   def admin_home
+    @teams = Team.all
   end
 
   def admin_classes

@@ -1,5 +1,18 @@
 <% provide(:title, "Admin Home") %>
 <h1>Admin Home</h1>
-<p>
-  Admin home for GWAN's peer evaluation app.
-</p>
+<body>
+
+  <div class="container">
+    <h1 class="title">
+      Teams
+    </h1>
+    <% @teams.each do |team|%>
+      <div class="box">
+        <h4 class="cover"> <i class="sub_title">Team <%= team.id %></i></h4>
+        <p class="text"> description</p>
+        <%= link_to "View Ratings", student_rating_path, class: "button" %>
+      </div>
+    <% end %>
+  </div>
+</body>
+
