@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   delete '/logout',           to: 'sessions#destroy'
 
 
-  post '/edit',                to: 'pages#adin_team_overview'
+  put '/students',                to: 'pages#admin_team_overview'
   
   
   get '/student_signup',      to: 'students#new'

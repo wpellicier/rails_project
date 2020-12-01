@@ -4,14 +4,13 @@
 Displays all current students for an admin to make changes to
 </p>
 
-
-
 <ol>
-<%= @student.each do |student| %>
+<% @student.each do |student| %>
   <li>
     <%= student.fname %>
     <%= student.lname %>
     <%= student.team_id %>
+    <%= student.id %>
     <%= link_to "Edit", edit_student_path(student) %>
   </li>
 

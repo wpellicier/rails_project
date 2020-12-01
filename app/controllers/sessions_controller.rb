@@ -13,13 +13,7 @@ class SessionsController < ApplicationController
     end
   end
   
-  def destroy
+  def destroy 
   end
-  
-  #Not sure if this is needed
-  def edit
-    @student = Student.find(params[:id])
-  end
-  
 
 end
