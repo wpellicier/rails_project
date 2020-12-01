@@ -425,7 +425,9 @@ h1.title{
 // members text col
 .name_admin{
   position: relative;
-
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid black;
   width: 200px;
   color: black;
 }
