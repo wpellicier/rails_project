@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   put '/students',            to: 'pages#admin_team_overview'
 
+  get '/admin_team_overview',  to: 'pages#admin_team_overview'
 
   get '/student_signup',      to: 'students#new'
 

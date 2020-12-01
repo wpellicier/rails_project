@@ -1,11 +1,15 @@
 <% provide(:title, "Admin Home") %>
 <h1>Admin Home</h1>
-<body>
 
+<body>
+<%= link_to "Student overview", '/admin_team_overview'%>
   <div class="container">
+    <div>
     <h1 class="title">
       Teams
     </h1>
+    
+    </div>
     <% @students.each do |student|%>
       <% if @teams.exclude?(student.team_id) %>
         <div class="box">
