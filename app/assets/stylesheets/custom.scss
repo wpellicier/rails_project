@@ -259,8 +259,8 @@ h1.title{
 .button {
   position: relative;
   border: none;
-  top: 30%;
-  left:20%;
+  top: 20%;
+  left:25%;
   color:black;
   background-color: lightskyblue;
   padding: 15px 32px;
@@ -363,5 +363,57 @@ h1.title{
   left: 8%;
   width: 85%;
   height: 35%;;
+  color: black;
+}
+
+
+//admin projects page
+
+// project cards
+//card
+.box_admin{
+  display: inline-block;
+  width: 270px;
+  height: 800px;
+  background:lightskyblue;
+  margin: 30px;
+
+  overflow: hidden;
+  border-radius: 5px;
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+//pre animated overlay on card
+.cover_admin{
+  position: relative;
+  top: -2.8%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: lightseagreen;
+  transition: 0.5s;
+  z-index: 1;
+}
+// project #
+.sub_title_admin {
+  position: relative;
+  font-weight: bold;
+  top: 35%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  color:black;
+  font-size: 30px;
+
+}
+
+// description text
+.text_admin{
+  position: relative;
+  top:100px;
+  left: 35%;
+  width: 60%;
   color: black;
 }

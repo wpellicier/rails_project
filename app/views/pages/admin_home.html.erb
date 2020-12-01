@@ -11,7 +11,7 @@
         <div class="box">
           <h4 class="cover"> <i class="sub_title">Team <%= student.team_id %></i></h4>
           <p class="text"> description</p>
-          <%= link_to "View Ratings", student_rating_path, class: "button" %>
+          <%= link_to "Projects", admin_projects_path, class: "button"%>
         </div>
         <% @teams.push(student.team_id)%>
       <% end %>

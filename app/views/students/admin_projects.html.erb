@@ -1,11 +1,29 @@
-<% provide(:title, "Team X Projects") %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
- 
-       <h1>
-         <%= @student.first.team_id %> TEAM
-      </h1>
-    </section>
-  </aside>
+
+<div class="container">
+  <h1 class="title">
+    Team <%= @student.first.team_id %> Projects
+  </h1>
+  
+<!-- creating and populating members array -->
+<% @members = Array.new%>
+<% @student.each do |student| %>
+  <%  if student.team_id === @student.first.team_id %>
+    <% @members.push(student)%>
+  <% end %>
+<% end %>
+
+<%= @members%>
+<%= @current_student%>
+
+  <div class="box_admin">
+    <h4 class="cover_admin"> <i class="sub_title_admin">Project 1</i></h4>
+    <p class="text_admin"> Ratings go here</p>
+    
+  </div>
+
+
+  
+
 </div>
+
+</body>
