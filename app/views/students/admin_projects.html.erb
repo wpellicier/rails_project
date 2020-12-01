@@ -1,7 +1,7 @@
 <% provide(:title, "Projects") %>
 <div class="container">
   <h1 class="title">
-    Team <%= @teams %> Projects
+    Team <%= @teams.first %> Projects
   </h1>
 
 <!-- creating and populating members array -->
@@ -12,19 +12,131 @@
 <% end %>
 
 <% @members%>
+<<<<<<< HEAD
 RATINGS:
+=======
+
+>>>>>>> c8ca42c4e3be096b00207a41bb3002f33c3d372d
 <% @ratings.each do |r| %>
-   <%= r.rating%>
+   <% r.rating%>
 <% end %>
 
   <div class="box_admin">
     <h4 class="cover_admin"> <i class="sub_title_admin">Project 1</i></h4>
-    <% @members.each do |member| %>
-    <p class="text_admin"> <%= member.fname%> <%= member.lname%> </p>
-
-    <% end %>
-    
+    <h3 class="description_admin"> Forming Groups</h3>
+  <table class="table_admin">
+    <tr>
+      <th>Members</th>
+      <th>Rating</th>
+    </tr>
+    <tr>
+      <td class="name_admin"> Ajay Kirtikar</td>
+      <td class="rating_admin">7</td>
+    </tr>
+    <tr>
+      <td class="name_admin"> Brock Hecker </td>
+      <td class="rating_admin">6</td>
+    </tr>
+  </table>
   </div>
+
+  <div class="box_admin">
+    <h4 class="cover_admin"> <i class="sub_title_admin">Project 2</i></h4>
+    <h3 class="description_admin"> The Game of Set</h3>
+  <table class="table_admin">
+    <tr>
+      <th>Members</th>
+      <th>Rating</th>
+    </tr>
+    <tr>
+      <td class="name_admin"> Ajay Kirtikar</td>
+      <td class="rating_admin">7</td>
+    </tr>
+    <tr>
+      <td class="name_admin"> Brock Hecker </td>
+      <td class="rating_admin">6</td>
+    </tr>
+  </table>
+  </div>
+
+  <div class="box_admin">
+    <h4 class="cover_admin"> <i class="sub_title_admin">Project 3</i></h4>
+    <h3 class="description_admin"> Web Scraping</h3>
+  <table class="table_admin">
+    <tr>
+      <th>Members</th>
+      <th>Rating</th>
+    </tr>
+    <tr>
+      <td class="name_admin"> Ajay Kirtikar</td>
+      <td class="rating_admin">7</td>
+    </tr>
+    <tr>
+      <td class="name_admin"> Brock Hecker </td>
+      <td class="rating_admin">6</td>
+    </tr>
+  </table>
+  </div>
+
+  <div class="box_admin">
+    <h4 class="cover_admin"> <i class="sub_title_admin">Project 4</i></h4>
+    <h3 class="description_admin"> Faculty Page Redesign</h3>
+  <table class="table_admin">
+    <tr>
+      <th>Members</th>
+      <th>Rating</th>
+    </tr>
+    <tr>
+      <td class="name_admin"> Ajay Kirtikar</td>
+      <td class="rating_admin">7</td>
+    </tr>
+    <tr>
+      <td class="name_admin"> Brock Hecker </td>
+      <td class="rating_admin">6</td>
+    </tr>
+  </table>
+  </div>
+
+  <div class="box_admin">
+    <h4 class="cover_admin"> <i class="sub_title_admin">Project 5</i></h4>
+    <h3 class="description_admin"> The Game of Set, Reloaded</h3>
+  <table class="table_admin">
+    <tr>
+      <th>Members</th>
+      <th>Rating</th>
+    </tr>
+    <tr>
+      <td class="name_admin"> Ajay Kirtikar</td>
+      <td class="rating_admin">7</td>
+    </tr>
+    <tr>
+      <td class="name_admin"> Brock Hecker </td>
+      <td class="rating_admin">6</td>
+    </tr>
+  </table>
+  </div>
+
+  <div class="box_admin">
+    <h4 class="cover_admin"> <i class="sub_title_admin">Project 6</i></h4>
+    <h3 class="description_admin"> Final Project</h3>
+  <table class="table_admin">
+    <tr>
+      <th>Members</th>
+      <th>Rating</th>
+    </tr>
+    <tr>
+      <td class="name_admin"> Ajay Kirtikar</td>
+      <td class="rating_admin">7</td>
+    </tr>
+    <tr>
+      <td class="name_admin"> Brock Hecker </td>
+      <td class="rating_admin">6</td>
+    </tr>
+  </table>
+  </div>
+
+
+  
 
 
   

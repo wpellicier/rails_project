@@ -360,9 +360,8 @@ h1.title{
 .text{
   position: relative;
   top:5%;
-  left: 8%;
+  left: 15%;
   width: 85%;
-  height: 35%;;
   color: black;
 }
 
@@ -374,7 +373,7 @@ h1.title{
 .box_admin{
   display: inline-block;
   width: 270px;
-  height: 800px;
+  height: 500px;
   background:lightskyblue;
   margin: 30px;
 
@@ -408,17 +407,42 @@ h1.title{
   font-size: 30px;
 
 }
-
 // description text
-.text_admin{
+.description_admin{
   position: relative;
-  top:100px;
-  left: 35%;
-  width: 60%;
+  text-align: center;
+  color: black;
+}
+
+// container for ratings on admin page
+.table_admin{
+  position: relative;
+  top: 5%;
+  left: 5%;
+  border: 1px solid black;
+  
+}
+// members text col
+.name_admin{
+  position: relative;
+
+  width: 200px;
   color: black;
 }
 
 #textbox {
   width: 200px;
   height: 80px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid black;
+}
+// rating col
+.rating_admin{
+  position: relative;
+  width: 30px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid black;
 }

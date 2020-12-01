@@ -11,17 +11,17 @@
     
     </div>
     <% @students.each do |student|%>
-      <% if @teams.exclude?(student.team_id) %>
-        <% @teams.push(student.team_id)%>
+      <% if @teams.exclude?(student.team_id) && student.team_id != nil %>
+      <% @teams.push(student.team_id)%>
       <% end %>
     <% end %>
     <% @teams.sort! %>
     <% @teams.each do |f| %>
       <div class="box">
-        <h4 class="cover"> <i class="sub_title">Team <%= f %></i></h4>
-        <p class="text"> description</p>
-        <%= link_to "Projects", admin_projects_path, class: "button"%>
-      </div>
+      <h4 class="cover"> <i class="sub_title">Team <%= f %></i></h4>
+      <p class="text"> description</p>
+      <%= link_to "Projects", admin_projects_path, class: "button"%>
+    </div>
     <% end %>
   </div>
 </body>
