@@ -26,7 +26,15 @@ class StudentsController < ApplicationController
   end
 
   def admin_projects
+    @teams = Array.new
+    @members = Array.new
     @student = Student.all
+    @student.each do |student|
+        if @teams.exclude?(student.team_id)
+          @teams.push(student.team_id)
+        end
+    end
+    @ratings = Rating.all
   end
   
   def edit

@@ -1,23 +1,28 @@
-
+<% provide(:title, "Projects") %>
 <div class="container">
   <h1 class="title">
-    Team <%= @student.first.team_id %> Projects
+    Team <%= @teams %> Projects
   </h1>
-  
+
 <!-- creating and populating members array -->
-<% @members = Array.new%>
 <% @student.each do |student| %>
-  <%  if student.team_id === @student.first.team_id %>
+  <%  if student.team_id === @teams.first %>
     <% @members.push(student)%>
   <% end %>
 <% end %>
 
 <%= @members%>
-<%= @current_student%>
+RATINGS:
+<% @ratings.each do |r| %>
+   <%= r.rating%>
+<% end %>
 
   <div class="box_admin">
     <h4 class="cover_admin"> <i class="sub_title_admin">Project 1</i></h4>
-    <p class="text_admin"> Ratings go here</p>
+    <% @members.each do |member| %>
+    <p class="text_admin"> <%= member.fname%> <%= member.lname%> </p>
+
+    <% end %>
     
   </div>
 

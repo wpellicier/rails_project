@@ -28,9 +28,6 @@ class PagesController < ApplicationController
     @teams = Array.new
   end
 
-  def admin_classes
-  end
-
   def admin_class_home
   end
 
