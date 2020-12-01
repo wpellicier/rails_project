@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a602d55-1109-4f58-8180-5c4490ed978b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.ruby-version" beforeDir="false" afterPath="$PROJECT_DIR$/.ruby-version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/admin_home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/admin_home.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/students/admin_projects.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/students/admin_projects.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +162,8 @@
       <workItem from="1606613567001" duration="2965000" />
       <workItem from="1606776915371" duration="2618000" />
       <workItem from="1606800475538" duration="2985000" />
+      <workItem from="1606841595282" duration="31000" />
+      <workItem from="1606841638557" duration="834000" />
     </task>
     <servers />
   </component>
@@ -176,5 +181,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="459" y="251" width="424" height="491" key="FileChooserDialogImpl" timestamp="1606841624955">
+      <screen x="72" y="27" width="1208" height="933" />
+    </state>
+    <state x="459" y="251" width="424" height="491" key="FileChooserDialogImpl/72.27.1208.933@72.27.1208.933" timestamp="1606841624955" />
   </component>
 </project>
