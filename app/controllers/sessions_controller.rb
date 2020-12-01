@@ -11,11 +11,8 @@ class SessionsController < ApplicationController
         redirect_to admin_home_path
       else
         flash.now[:danger] = 'Invalid email/password combination'
-        render 'admin_home'
+        render 'admin_login'
       end
-    else
-      flash.now[:danger] = 'Invalid email/password combination'
-      render 'admin_login'
     end
   end
 
