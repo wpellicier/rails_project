@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   
   
   get '/student_rating',        to: 'students#rating'
+  get '/admin_projects',         to: 'students#admin_projects'
 
   resources :students
   resources :edit

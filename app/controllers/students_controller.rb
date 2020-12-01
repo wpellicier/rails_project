@@ -24,6 +24,10 @@ class StudentsController < ApplicationController
     @current_student = Student.find_by(id: session[:student_id])
     
   end
+
+  def admin_projects
+    @student = Student.all
+  end
   
   def edit
     @student = Student.find(params[:id])
