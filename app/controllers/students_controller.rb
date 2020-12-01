@@ -38,7 +38,7 @@ class StudentsController < ApplicationController
     
     if @student.update(student_params)
       flash[:success] = "Profile updated"
-      redirect_to @student
+      redirect_to admin_team_overview_path
     else
       render 'edit'
     end
