@@ -24,7 +24,8 @@ class PagesController < ApplicationController
   end
 
   def admin_home
-    @teams = Team.all
+    @students = Student.all
+    @teams = Array.new
   end
 
   def admin_classes
@@ -35,6 +36,7 @@ class PagesController < ApplicationController
 
   def admin_team_overview
     @student = Student.all
+
   end
   
   #Not sure if this is needed

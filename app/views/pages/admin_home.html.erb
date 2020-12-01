@@ -6,12 +6,15 @@
     <h1 class="title">
       Teams
     </h1>
-    <% @teams.each do |team|%>
-      <div class="box">
-        <h4 class="cover"> <i class="sub_title">Team <%= team.id %></i></h4>
-        <p class="text"> description</p>
-        <%= link_to "View Ratings", student_rating_path, class: "button" %>
-      </div>
+    <% @students.each do |student|%>
+      <% if @teams.exclude?(student.team_id) %>
+        <div class="box">
+          <h4 class="cover"> <i class="sub_title">Team <%= student.team_id %></i></h4>
+          <p class="text"> description</p>
+          <%= link_to "View Ratings", student_rating_path, class: "button" %>
+        </div>
+        <% @teams.push(student.team_id)%>
+      <% end %>
     <% end %>
   </div>
 </body>
