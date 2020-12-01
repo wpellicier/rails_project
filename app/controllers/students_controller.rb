@@ -20,8 +20,9 @@ class StudentsController < ApplicationController
 
   #needs work, not done
   def rating
-    @student = Student.find_by(id: session[:student_id])
-    #@rating = Rating.find_by(params[:id])
+    @student = Student.all
+    @current_student = Student.find_by(id: session[:student_id])
+    
   end
   
   def edit
