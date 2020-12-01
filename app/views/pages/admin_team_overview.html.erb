@@ -1,6 +1,20 @@
 <% provide(:title, "Team Overview") %>
 <h1>Team Overview</h1>
 <p>
-  Admin Team Overview page for GWAN's peer evaluation app.
-  Will contain team members and their evaluation results.
+Displays all current students for an admin to make changes to
 </p>
+
+
+
+<ol>
+<%= @student.each do |student| %>
+  <li>
+    <%= student.fname %>
+    <%= student.lname %>
+    <%= student.team_id %>
+    <%= link_to "Edit", edit_student_path(student) %>
+  </li>
+
+<% end %>
+</ol>
+<!-- <button to save goes here></button> -->

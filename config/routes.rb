@@ -3,16 +3,17 @@ Rails.application.routes.draw do
   get 'sessions/new'
   root 'pages#front'
   get '/about',               to: 'pages#about'
-
+  
   get '/student_login',       to: 'sessions#new'
   post '/student_login',      to: 'sessions#create'
   get '/admin_login',         to: 'sessions#admin_login'
-  post '/admin_login',        to: 'sessions#admin_create'
+  post '/admin_login',        to: 'pages#admin_team_overview'
   delete '/logout',           to: 'sessions#destroy'
 
 
-  #get '/student_signup',      to: 'students#student_signup'
-  #post '/student_signup',     to: 'students#new'
+  post '/edit',                to: 'pages#adin_team_overview'
+  
+  
   get '/student_signup',      to: 'students#new'
   
   get '/student_home',        to: 'pages#student_home'
@@ -28,4 +29,5 @@ Rails.application.routes.draw do
   get '/student_rating',        to: 'students#rating'
 
   resources :students
+  resources :edit
 end

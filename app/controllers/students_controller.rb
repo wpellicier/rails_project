@@ -23,6 +23,11 @@ class StudentsController < ApplicationController
     @student = Student.find_by(id: session[:student_id])
     #@rating = Rating.find_by(params[:id])
   end
+  
+  def edit
+    @student = Student.find(params[:id])
+  end
+  
 
   private
 

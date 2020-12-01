@@ -33,5 +33,12 @@ class PagesController < ApplicationController
   end
 
   def admin_team_overview
+    @student = Student.all
   end
+  
+  #Not sure if this is needed
+  def edit
+    @student = Student.find(params[:id])
+  end
+  
 end
