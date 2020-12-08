@@ -19,7 +19,7 @@ class StudentsController < ApplicationController
   end
 
   #needs work, not done
-  def rating
+  def evaluation
     @student = Student.all
     @current_student = Student.find_by(id: session[:student_id])
     
@@ -34,7 +34,7 @@ class StudentsController < ApplicationController
           @teams.push(student.team_id)
         end
     end
-    @ratings = Rating.all
+    @evaluations = Evaluation.all
   end
   
   def edit

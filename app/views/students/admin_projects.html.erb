@@ -1,7 +1,7 @@
 <% provide(:title, "Projects") %>
 <div class="container">
   <h1 class="title">
-    Team <%= @teams.first %> Projects
+    Team <%= @teams[2] %> Projects
   </h1>
 
 <!-- creating and populating members array -->
@@ -13,8 +13,8 @@
 
 <% @members%>
 
-<% @ratings.each do |r| %>
-   <% r.rating%>
+<% @evaluations.each do |e| %>
+   <% e.evaluator_id%>
 <% end %>
 
   <div class="box_admin">

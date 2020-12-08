@@ -1,5 +1,6 @@
 class Student < ApplicationRecord
-  has_many :evaluations
+  has_many :evaluations, foreign_key: "evaluator_id"#dependent :destroy
+
   before_save {self.email = email.downcase }
   validates :buck_id, presence: true
   validates :fname, presence: true
