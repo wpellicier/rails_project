@@ -1,33 +1,32 @@
 <% provide(:title, "Team Overview") %>
+<div class="container">
 <h1>Team Overview</h1>
 <p>
 Displays all current students for an admin to make changes to
 </p>
 <%= link_to "Back", '/admin_home'%>
-<table>
-  
 
-<tr>
-  <th>ID</td>
-  <th>First Name</td>
-  <th>Last Name</td>
-  <th>Team id</td>
-  
-</tr>
+  <div>
+    <table>
+    <tr>
+      <th class="table_header_admin">ID</td>
+      <th class="table_header_admin">Buck ID</td>
+      <th class="table_header_admin">First Name</td>
+      <th class="table_header_admin">Last Name</td>
+      <th class="table_header_admin">Team id</td>
+    </tr>
+  <% @student.each do |student| %>
+    <tr>
+      <td class="table_text_admin"><%= student.id %></td>
+      <td class="table_text_admin"><%= student.buck_id %></td>
+      <td class="table_text_admin"><%= student.fname %></td>
+      <td class="table_text_admin"><%= student.lname %></td>
+      <td class="table_text_admin"><%= student.team_id %></td>
+      <td class="table_text_admin"><%= link_to "Edit", edit_student_path(student) %></td>
+      <td class="table_text_admin">Implement DELETE</td>
+    </tr>
 
-
-
-<% @student.each do |student| %>
-  <tr>
-    <td><%= student.id %></td>
-    <td><%= student.buck_id %></td>
-    <td><%= student.fname %></td>
-    <td><%= student.lname %></td>
-    <td><%= student.team_id %></td>
-    <td><%= link_to "Edit", edit_student_path(student) %></td>
-  </tr>
-
-<% end %>
-</table>
-
-<!-- <button to save goes here></button> -->
+  <% end %>
+    </table>
+  </div>
+</div>
