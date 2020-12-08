@@ -6,8 +6,6 @@
     <div class="myform form"></div>
       <%= form_with(model: @student, local: true) do |f| %>
           
-          <%= f.label :fid , :class => "form-control my-input", :placeholder => "id"%>
-          
           <div class="form-group">
             <label>First Name</label>
              <%= f.text_field :fname, :class => "form-control my-input", :placeholder => "First Name"%>
