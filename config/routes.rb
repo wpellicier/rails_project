@@ -28,8 +28,8 @@ Rails.application.routes.draw do
   get '/admin_team_overview', to: 'pages#admin_team_overview'
 
 
-  get '/student_rating',        to: 'students#rating'
-  post '/student_rating',        to: 'evaluations#create'
+  get '/student_evaluation',        to: 'students#evaluation'
+  post '/student_evaluation',        to: 'evaluations#create'
   get '/admin_projects',         to: 'students#admin_projects'
 
   resources :evaluations
