@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :evaluations
   get 'students/new'
   get 'sessions/new'
   root 'pages#front'
@@ -28,8 +29,11 @@ Rails.application.routes.draw do
 
 
   get '/student_rating',        to: 'students#rating'
+  post '/student_rating',        to: 'evaluations#create'
   get '/admin_projects',         to: 'students#admin_projects'
 
+  resources :evaluations
   resources :students
   resources :edit
+  
 end

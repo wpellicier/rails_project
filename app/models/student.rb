@@ -1,4 +1,5 @@
 class Student < ApplicationRecord
+  has_many :evaluations
   before_save {self.email = email.downcase }
   validates :buck_id, presence: true
   validates :fname, presence: true

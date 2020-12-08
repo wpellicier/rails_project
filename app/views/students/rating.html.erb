@@ -28,18 +28,28 @@
     </h1>
     <!-- for each member in the current user's team -->
     <% @members.each do |member| %>
-    <!-- member card -->
-    <div class="member_box">
-      <!-- member name -->
-      <h2 class="member_name"> <%= member.fname %> <%= member.lname %></h2>
-      <label class="rating_text" >Rating (out of 10)</label>
-      
-        <textarea class="text" id="textbox" ></textarea>
-      <!-- comment box -->
-      <textarea class="text" id="textbox" >Comments about this group member</textarea>
-      <!-- submit button currenly hidden due to text dimensions-->
-      <%= link_to "Submit", student_rating_path, class: "submitBtn" %>
-    </div>
+      <!-- member card -->
+      <div class="member_box">
+        <!-- member name -->
+        <h2 class="member_name"> <%= member.fname %> <%= member.lname %></h2>
+        <%= form_with(model: @evaluation, local: true) do |f| %>
+          <div class="field">
+            <%= f.label :Rating%>
+            <%= f.text_area :evaluation, class: 'form-control', placeholder: "Enter a rating from 1 to 10" %>
+          </div>
+          <%= f.hidden_field :evaluator_id, value: @current_student.id %>
+          <%= f.hidden_field :evaluee_id, value:  member.id %>
+          <div class="field">
+            <%= f.label :Project%>
+            <%= f.text_area :project_id, class: 'form-control', placeholder: "Enter project number" %>
+          </div>
+          <div class="field">
+            <%= f.label :Comments%>
+            <%= f.text_area :comment, class: 'form-control', placeholder: "Enter a comment" %>
+          </div>
+          <%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %>
+        <% end %>
+      </div>
     <% end %>
   
   </div>

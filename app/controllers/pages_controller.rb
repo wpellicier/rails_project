@@ -14,7 +14,8 @@ class PagesController < ApplicationController
   def student_projects
   end
 
-  def student_evaluations
+  def student_rating
+    @evaluation = current_student.evaluations.build if logged_in?
   end
   
   def student_signup
