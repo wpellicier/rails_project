@@ -4,139 +4,41 @@
     Team <%= @teams[2] %> Projects
   </h1>
 
-<!-- creating and populating members array -->
-<% @student.each do |student| %>
-  <%  if student.team_id === @teams.first %>
-    <% @members.push(student)%>
+  <!-- creating and populating members array -->
+  <% @student.each do |student| %>
+    <%  if student.team_id === @teams.first %>
+      <% @members.push(student)%>
+    <% end %>
   <% end %>
-<% end %>
 
-<% @members%>
-
-<% @evaluations.each do |e| %>
-   <% e.evaluator_id%>
-<% end %>
-
-  <div class="box_admin">
-    <h4 class="cover_admin"> <i class="sub_title_admin">Project 1</i></h4>
-    <h3 class="description_admin"> Forming Groups</h3>
-  <table class="table_admin">
-    <tr>
-      <th>Members</th>
-      <th>Rating</th>
-    </tr>
-    <tr>
-      <td class="name_admin"> Ajay Kirtikar</td>
-      <td class="rating_admin">7</td>
-    </tr>
-    <tr>
-      <td class="name_admin"> Brock Hecker </td>
-      <td class="rating_admin">6</td>
-    </tr>
-  </table>
-  </div>
-
-  <div class="box_admin">
-    <h4 class="cover_admin"> <i class="sub_title_admin">Project 2</i></h4>
-    <h3 class="description_admin"> The Game of Set</h3>
-  <table class="table_admin">
-    <tr>
-      <th>Members</th>
-      <th>Rating</th>
-    </tr>
-    <tr>
-      <td class="name_admin"> Ajay Kirtikar</td>
-      <td class="rating_admin">7</td>
-    </tr>
-    <tr>
-      <td class="name_admin"> Brock Hecker </td>
-      <td class="rating_admin">6</td>
-    </tr>
-  </table>
-  </div>
-
-  <div class="box_admin">
-    <h4 class="cover_admin"> <i class="sub_title_admin">Project 3</i></h4>
-    <h3 class="description_admin"> Web Scraping</h3>
-  <table class="table_admin">
-    <tr>
-      <th>Members</th>
-      <th>Rating</th>
-    </tr>
-    <tr>
-      <td class="name_admin"> Ajay Kirtikar</td>
-      <td class="rating_admin">6</td>
-    </tr>
-    <tr>
-      <td class="name_admin"> Brock Hecker </td>
-      <td class="rating_admin">7</td>
-    </tr>
-  </table>
-  </div>
-
-  <div class="box_admin">
-    <h4 class="cover_admin"> <i class="sub_title_admin">Project 4</i></h4>
-    <h3 class="description_admin"> Faculty Page Redesign</h3>
-  <table class="table_admin">
-    <tr>
-      <th>Members</th>
-      <th>Rating</th>
-    </tr>
-    <tr>
-      <td class="name_admin"> Ajay Kirtikar</td>
-      <td class="rating_admin">6</td>
-    </tr>
-    <tr>
-      <td class="name_admin"> Brock Hecker </td>
-      <td class="rating_admin">6</td>
-    </tr>
-  </table>
-  </div>
-
-  <div class="box_admin">
-    <h4 class="cover_admin"> <i class="sub_title_admin">Project 5</i></h4>
-    <h3 class="description_admin"> The Game of Set, Reloaded</h3>
-  <table class="table_admin">
-    <tr>
-      <th>Members</th>
-      <th>Rating</th>
-    </tr>
-    <tr>
-      <td class="name_admin"> Ajay Kirtikar</td>
-      <td class="rating_admin">8</td>
-    </tr>
-    <tr>
-      <td class="name_admin"> Brock Hecker </td>
-      <td class="rating_admin">7</td>
-    </tr>
-  </table>
-  </div>
-
-  <div class="box_admin">
-    <h4 class="cover_admin"> <i class="sub_title_admin">Project 6</i></h4>
-    <h3 class="description_admin"> Final Project</h3>
-  <table class="table_admin">
-    <tr>
-      <th>Members</th>
-      <th>Rating</th>
-    </tr>
-    <tr>
-      <td class="name_admin"> Ajay Kirtikar</td>
-      <td class="rating_admin">7</td>
-    </tr>
-    <tr>
-      <td class="name_admin"> Brock Hecker </td>
-      <td class="rating_admin">7</td>
-    </tr>
-  </table>
-  </div>
+  <% @members%>
 
 
-  
+  <% i = 1%>
+  <% num = 6%>
+  <% until i > num do %>
+      <div class="box_admin">
+        <h4 class="cover_admin"> <i class="project_admin">Project <%= i%></i></h4>
+        <h3 class="description_admin"> Forming Groups</h3>
+      <table class="table_admin">
+        <tr >
+          <th class="table_header_admin">Evaluator</th>
+          <th class="table_header_admin">Evaluatee</th>
+          <th class="table_header_admin">Evaluation</th>
+          <th class="table_header_admin">Comment</th>
+        </tr>
+    <% @evaluations.each do |e| %>
+      <% next if e.project_id != i%>
+        <tr>
+          <td class="table_text_admin"> <%= e.evaluator_id%></td>
+          <td class="table_text_admin"> <%= e.evaluee_id%> </td>
+          <td class="table_text_admin"><%= e.evaluation%> </td>
+          <td class="table_text_admin"><%= e.comment%> </td>
+        </tr>
+    <% end %>
+        </table>
+      </div>
 
-
-  
-
+    <% i += 1 %>
+  <% end %>
 </div>
-
-</body>
