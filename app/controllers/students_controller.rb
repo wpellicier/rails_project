@@ -61,8 +61,4 @@ class StudentsController < ApplicationController
     def student_params
       params.require(:student).permit(:buck_id, :fname, :lname, :email, :team_id, :password)
     end
-
-    def student_ratings
-      params.require(:rating).permit(:rating, :user_id, :project_number, :comment)
-    end
 end

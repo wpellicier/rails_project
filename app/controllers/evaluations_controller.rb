@@ -28,13 +28,13 @@ class EvaluationsController < ApplicationController
     def create
       @current_student = Student.find_by(id: session[:student_id]) # ADDED THIS BUT NOT DONE
       # Get the two params then add the rest later? Still need to figure out how to get evaluee id
-      @rating =  Evaluation.new(evaluation_params)
-      if @rating.save
+      @evaluation =  Evaluation.new(evaluation_params)
+      if @evaluation.save
         flash[:success] = "Evaluation submitted"
-        redirect_to student_rating_path
+        redirect_to student_evaluation_path
       else
         flash[:warning] = "Could not submit"
-        redirect_to student_home_path
+        redirect_to student_evaluation_path
       end
     end
   
