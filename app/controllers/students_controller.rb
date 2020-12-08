@@ -22,9 +22,10 @@ class StudentsController < ApplicationController
   def evaluation
     @student = Student.all
     @current_student = Student.find_by(id: session[:student_id])
-    
   end
 
+  # once admin clicks on a team
+  # shows all ratings for the team for all projects
   def admin_projects
     @teams = Array.new
     @members = Array.new
@@ -42,14 +43,9 @@ class StudentsController < ApplicationController
   end
   
   def update
-
     @student = Student.find(params[:id])
-    
-    flash[:success] = "ID number is #{student_params}"
-
-    
     if @student.update(student_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "#{@student.fname} #{@student.lname}'s profile updated"
       redirect_to admin_team_overview_path
     else
       render 'edit'
@@ -57,7 +53,6 @@ class StudentsController < ApplicationController
   end
 
   private
-
     def student_params
       params.require(:student).permit(:buck_id, :fname, :lname, :email, :team_id, :password)
     end
