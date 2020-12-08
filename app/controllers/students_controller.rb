@@ -40,7 +40,8 @@ class StudentsController < ApplicationController
   
   def destroy
     Student.find(params[:id]).destroy
-    flash[:success] = "User deleted"
+    Evaluation.find_by(evaluator_id: params[:id]).destroy
+    flash[:success] = "User and all reviews deleted"
     redirect_to '/admin_team_overview'
   end
   
