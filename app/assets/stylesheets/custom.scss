@@ -357,7 +357,43 @@ h1.title{
 }
 
 
-//admin projects page
+
+
+
+//ADMIN home page
+
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+.accordian-item{
+  background-color:#212838;
+  
+}
+.accordian-link{
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: lightskyblue;
+  text-decoration: none;
+  background-color: #212838;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  //cursor: pointer;
+}
+.admin_data{
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #212838;
+  transition: 500ms;
+}
+.accordian-item:hover .admin_data{
+  max-height: 100%;
+}
+
 
 // project cards
 //card
@@ -366,16 +402,13 @@ h1.title{
   width: 700px;
   height: 500px;
   background:lightskyblue;
-  margin: 30px;
-
-  overflow: hidden;
+  margin: 5px;
   border-radius: 5px;
-
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
   transition: 0.3s;
 }
 
-//pre animated overlay on card
+//cover div
 .cover_admin{
   position: relative;
   text-align: center;

@@ -27,6 +27,14 @@ class PagesController < ApplicationController
   def admin_home
     @students = Student.all
     @teams = Array.new
+    @members = Array.new
+    @student = Student.all
+    @student.each do |student|
+        if @teams.exclude?(student.team_id)
+          @teams.push(student.team_id)
+        end
+    end
+    @evaluations = Evaluation.all
   end
 
   def admin_class_home
