@@ -46,8 +46,10 @@
                 <% @evaluations.each do |e| %>
                   <% next if e.project_id != i or e.team_id != f%>
                     <tr>
-                      <td class="table_text_admin"> <%= e.evaluator_id%></td>
-                        <td class="table_text_admin"> <%= e.evaluee_id%> </td>
+                        <% @evaluator = Student.find(e.evaluator_id) %>
+                        <% @evaluee = Student.find(e.evaluee_id) %>
+                        <td class="table_text_admin"> <%= @evaluator.fname + " " + @evaluator.lname%></td>
+                        <td class="table_text_admin"> <%= @evaluee.fname + " " + @evaluee.lname %></td>
                         <td class="table_text_admin"><%= e.evaluation%> </td>
                         <td class="table_text_admin"><%= e.comment%> </td>
                     </tr>
