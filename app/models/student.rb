@@ -1,5 +1,5 @@
 class Student < ApplicationRecord
-  has_many :evaluations, #dependent :destroy
+  has_many :evaluations #dependent :destroy
 
   before_save {self.email = email.downcase }
   validates :buck_id, presence: true

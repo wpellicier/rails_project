@@ -46,6 +46,7 @@
             <%= f.label :Comments%>
             <%= f.text_area :comment, class: 'form-control', placeholder: "Enter a comment" %>
           </div>
+          <%= f.hidden_field :team_id, value: @current_student.team_id %>
           <%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %>
         <% end %>
       </div>

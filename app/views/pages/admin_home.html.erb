@@ -2,81 +2,63 @@
 <h1>Admin Home</h1>
 
 <body>
-<button>
-  <%= link_to "Student overview", '/admin_team_overview'%>
-</button>
+  <button>
+    <%= link_to "Student overview", '/admin_team_overview'%>
+  </button>
   <div class="container">
     <h1 class="title">
       Teams
     </h1>
-    
 
-  <!-- creating and populating members array -->
-  <% @student.each do |student| %>
-    <% if student.team_id === @teams.first %>
-      <% @members.push(student)%>
-    <% end %>
-  <% end %>
-
-<% @members %>
-
-
-
-  
-    <% @students.each do |student|%>
-      <% if @teams.exclude?(student.team_id) && student.team_id != nil %>
-      <% @teams.push(student.team_id)%>
+    <!-- creating and populating members array -->
+    <% @student.each do |student| %>
+      <% if student.team_id === @teams.first %>
+        <% @members.push(student)%>
       <% end %>
     <% end %>
-    <% @teams.sort! %>
 
-  <div class ="accordian-item" id= "team1">
-    <% i = 1%>
-    <% num = 6%>
-    <% @teams.each do |f| %>
+    <% @members %>
+    <% @students.each do |student|%>
+      <% if @teams.exclude?(student.team_id) && student.team_id != nil %>
+        <% @teams.push(student.team_id)%>
+      <% end %>
+    <% end %>
+    <%# @teams.sort! This causes an error if there is a student without an assigned group.%> 
+
+    <div class ="accordian-item" id= "team1">
+      <% num = 6%>
+      <% @teams.each do |f| %>
         <h4 class="accordian-link" href="#team1"> <i>Team <%= f %></i></h4>
 
         <div class="admin_data">
-
+          <% i = 1 %>
           <% until i > num do %>
             <div class="box_admin" >
               <h4 class="cover_admin"> <i class="project_admin">Project <%= i%></i></h4>
               <h3 class="description_admin"> Forming Groups</h3>
-            <table class="table_admin">
-              <tr >
-                <th class="table_header_admin">Evaluator</th>
-                <th class="table_header_admin">Evaluatee</th>
-                <th class="table_header_admin">Evaluation</th>
-                <th class="table_header_admin">Comment</th>
-              </tr>
-          <% @evaluations.each do |e| %>
-            <% next if e.project_id != i%>
-              <tr>
-                <td class="table_text_admin"> <%= e.evaluator_id%></td>
-                <td class="table_text_admin"> <%= e.evaluee_id%> </td>
-                <td class="table_text_admin"><%= e.evaluation%> </td>
-                <td class="table_text_admin"><%= e.comment%> </td>
-              </tr>
-            <% end %>
-            </table>
+              <table class="table_admin">
+                <tr >
+                  <th class="table_header_admin">Evaluator</th>
+                  <th class="table_header_admin">Evaluatee</th>
+                  <th class="table_header_admin">Evaluation</th>
+                  <th class="table_header_admin">Comment</th>
+                </tr>
+                <% @evaluations.each do |e| %>
+                  <% next if e.project_id != i or e.team_id != f%>
+                    <tr>
+                      <td class="table_text_admin"> <%= e.evaluator_id%></td>
+                        <td class="table_text_admin"> <%= e.evaluee_id%> </td>
+                        <td class="table_text_admin"><%= e.evaluation%> </td>
+                        <td class="table_text_admin"><%= e.comment%> </td>
+                    </tr>
+                  <% end %>
+              </table>
             </div>
-    
-          <% i += 1 %>
+            <% i += 1 %>
           <% end %>
-
         </div>
-    <% end %>
+      <% end %>
     </div>
-
-
-    
-</div>
-
- 
-
-
-  
-
-  
+  </div>
 </body>
 
