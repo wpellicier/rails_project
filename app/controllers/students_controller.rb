@@ -51,14 +51,14 @@ class StudentsController < ApplicationController
   
   def update
     @student = Student.find(params[:id])
-    if @student.update(student_params)
+    if @student.update_attributes(student_params)
       flash[:success] = "#{@student.fname} #{@student.lname}'s profile updated"
       redirect_to admin_team_overview_path
     else
       render 'edit'
     end
   end
-
+  
   private
     def student_params
       params.require(:student).permit(:buck_id, :fname, :lname, :email, :team_id, :password)

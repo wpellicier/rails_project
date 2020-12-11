@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
 
   def create
     student = Student.find_by(email: params[:session][:email].downcase)
-    if student && params[:session][:password] == student.password
+     if student && student.authenticate(params[:session][:password])
       log_in student
       redirect_to student
     else
