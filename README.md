@@ -16,6 +16,7 @@
   
   
 ##ADMINS
+  
   For admin login please use your osu.edu email, the password is 12345678
   
 ##THE APPLICATION
