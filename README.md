@@ -15,6 +15,9 @@
   7) finally run rails server
   
   
+##ADMINS
+  For admin login please use your osu.edu email, the password is 12345678
+  
 ##THE APPLICATION
 
   After completing these steps, you may click on preview by run in the Cloud9 IDE
