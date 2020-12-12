@@ -1,4 +1,6 @@
 # Release Notes
+Note: We weren't able to push to Heroku. When trying to push to Heroku, it gave us an error related to path = "/" and favicon.ico.
+
 List of major changes from v1.0 
 
 ### 1. Resolved issue with evaluation submission
