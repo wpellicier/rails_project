@@ -1,10 +1,8 @@
-#The last project done by team GWAN
 
+# ABOUT
+  This is a tool that students and teachers or TA's can use throughout the semester to see student evaluations. This tool also allows management of who is in which team. It was created as part of the Web Applications project course at The Ohio State University.
 
-##ABOUT
-  This is a tool that students and teachers or TA's can use throughout the semester to see student evaluations. This tool also allows management of who is in which team. 
-
-##SETUP
+## SETUP
   
   1) Simply clone the github
   2) the change to the rails_project directory
@@ -15,11 +13,11 @@
   7) finally run rails server
   
   
-##ADMINS
+## ADMINS
   
   For admin login please use your osu.edu email, the password is 12345678
   
-##THE APPLICATION
+## THE APPLICATION
 
   After completing these steps, you may click on preview by run in the Cloud9 IDE
     then preview running application
@@ -28,10 +26,10 @@
       
   
   
-##PRESENTATION
+## PRESENTATION
   https://docs.google.com/presentation/d/1tLuJice3QlI8Yv4G-Yla830eaW7XsbPx1_Xqx4mdWdQ/edit?usp=sharing
 
-##AUTHORS
+## AUTHORS
 
 
   Gavin Hearns
